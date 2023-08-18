@@ -30,6 +30,7 @@ window.addEventListener("load", function () {
         if (inputUser.value === user && inputPass.value === pass) {
             message.innerHTML = "Bienvenido " + inputUser.value
 
+            error.style.opacity = "1"
             error.style.transform = "translateY(20px)"
             error.style.border = "2px solid green"
             error.style.backgroundColor = "rgb(27, 157, 27)"
@@ -38,6 +39,7 @@ window.addEventListener("load", function () {
         } else {
             message.innerHTML = "Usuario o contraseña incorrectos"
 
+            error.style.opacity = "1"
             error.style.transform = "translateY(20px)"
             error.style.border = "2px solid red"
             error.style.backgroundColor = "rgb(255, 63, 63)"
@@ -49,7 +51,8 @@ window.addEventListener("load", function () {
         }
 
         setTimeout(() => {
-            error.style.transform = "translateY(60px)"
+            error.style.opacity = "0"
+            error.style.transform = "translateY(70px)"
         }, 5000);
 
     })
