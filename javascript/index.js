@@ -5,20 +5,7 @@ window.addEventListener("load", function () {
     let labelPass = document.getElementsByClassName("label")[1]
 
     let loginForm = document.getElementById("loginForm")
-
-    inputUser.addEventListener("focus", function () {
-        labelUser.style.top = "0px"
-    })
-    labelUser.addEventListener("click", function () {
-        labelUser.style.top = "0px"
-    })
-    inputPass.addEventListener("focus", function () {
-        labelPass.style.top = "0px"
-    })
-    labelPass.addEventListener("click", function () {
-        labelPass.style.top = "0px"
-    })
-
+    
     let user = "Miguel"
     let pass = "master"
     

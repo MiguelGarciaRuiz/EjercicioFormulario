@@ -48,15 +48,24 @@ h1 {
 .label {
     display: flex;
     position: relative;
-    top: 40px;
-    left: 10px;
+    margin-top: 25px;
     text-align: left;
-    transition: all 300ms;
-    
+    transition: all 300ms;    
+}
+
+.placeholder{
+    display: block;
+    position: absolute;
+    padding: 10px;
+    pointer-events: none;
+    transition: 500ms;
+    left: 0px;
+    top: 5px;
 }
 
 .input {
     display: flex;
+    flex-grow: 1;
     background-color: #ff6d09;
     border: 2px solid #000000;
     border-radius: 10px;
@@ -64,6 +73,10 @@ h1 {
     height: 40px;
     padding: 5px;
     color: #ffffff;
+}
+
+.input:focus + .placeholder, .input:not(:placeholder-shown) + .placeholder{
+transform: scale(0.8) translateY(-50px) translateX(-25px);
 }
 
 
